@@ -21,7 +21,7 @@ jobs:
 
       - name: Create folders
         working-directory: ${{env.WORKING_DIR}}
-        run: python Python-Code.Python-code.py
+        run: python Python-code.py
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
