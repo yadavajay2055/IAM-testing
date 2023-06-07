@@ -20,7 +20,7 @@ jobs:
           python-version: '3.x'
 
       - name: Create folders
-        #working-directory: ${{env.WORKING_DIR}}
+        working-directory: ${{env.WORKING_DIR}}
         run: python Python-code.py
 
       - name: Upload artifacts
