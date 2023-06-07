@@ -3,6 +3,9 @@ name: Manual Folder Creation and Artifact Upload
 on:
   workflow_dispatch:
 
+env:
+  WORKING_DIR: Python Code  
+
 jobs:
   folder_creation:
     runs-on: ubuntu-latest
@@ -17,8 +20,8 @@ jobs:
           python-version: '3.x'
 
       - name: Create folders
-        run: |
-          python Python-code.py
+        working-directory: ${{env.WORKING_DIR}}
+        run: python Python-Code.Python-code.py
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
